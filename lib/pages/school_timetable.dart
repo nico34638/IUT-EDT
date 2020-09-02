@@ -74,6 +74,9 @@ class _SchoolTimetablePageState extends State<SchoolTimetablePage> {
                                   name: Text(event.description.spe),
                                   startTime: event.dtstart,
                                   endTime: event.dtend,
+                                  place: event.description.salle,
+                                  speaker: Text(event.description.prof),
+                                    summary: event.summary
                                 ),
                             ],
                           ),

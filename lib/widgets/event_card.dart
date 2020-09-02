@@ -10,9 +10,10 @@ import 'package:jiffy/jiffy.dart';
 class EventCard extends StatefulWidget {
   final Text name;
   final Text speaker;
-  final Text place;
+  final String place;
   final DateTime startTime;
   final DateTime endTime;
+  final String summary;
 
   const EventCard({
     Key key,
@@ -21,6 +22,7 @@ class EventCard extends StatefulWidget {
     this.place,
     this.startTime,
     this.endTime,
+    this.summary
   }) : super(key: key);
 
   @override
@@ -46,8 +48,9 @@ class _EventCardState extends State<EventCard> {
       child: ListTile(
         title: widget.name,
         enabled: isEventAlreadyStarted(eventStartTime: widget.startTime),
-        subtitle:
-            Text('${Jiffy(widget.startTime).Hm} - ${Jiffy(widget.endTime).Hm}'),
+        subtitle: Text('${Jiffy(widget.startTime).add(hours: 2).hour}:${Jiffy(widget.startTime).add(hours: 2).minute} - ${Jiffy(widget.endTime).add(hours: 2).hour}:${Jiffy(widget.endTime).add(hours: 2).minute}  ${widget.summary.split('/')[1]}'), //subtitle: Text(widget.summary.split('/')[1]),
+          trailing: Text(widget.place, style: TextStyle(color: Colors.blueAccent))
+
       ),
     );
   }

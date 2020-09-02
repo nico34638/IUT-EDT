@@ -54,13 +54,7 @@ class _CustomSliverAppBarState extends State<CustomSliverAppBar> {
                 padding: EdgeInsets.all(4),
                 child: Row(
                   children: <Widget>[
-                    Container(
-                      alignment: Alignment.topLeft,
-                      child: IconButton(
-                        icon: Icon(Icons.menu, color: Colors.white),
-                        onPressed: () => print('open drawer'),
-                      ),
-                    ),
+
                     Expanded(
                       child: Container(
                         child: Column(
