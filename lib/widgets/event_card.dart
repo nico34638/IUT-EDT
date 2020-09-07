@@ -51,7 +51,7 @@ class _EventCardState extends State<EventCard> {
       child: ListTile(
         title: widget.name,
         enabled: isEventAlreadyStarted(eventStartTime: widget.startTime),
-        subtitle: Text('${Jiffy(startTimeCourse).format("hh:mm")} - ${Jiffy(endTimeCourse).format("hh:mm")}  ${widget.summary.split('/')[1]} ${widget.speaker.toUpperCase()}'), //subtitle: Text(widget.summary.split('/')[1]),
+        subtitle: Text('${Jiffy(startTimeCourse).format("HH:mm")} - ${Jiffy(endTimeCourse).format("HH:mm")}  ${widget.summary.split('/')[1]} ${widget.speaker.toUpperCase()}'), //subtitle: Text(widget.summary.split('/')[1]),
           trailing: Text(widget.place, style: TextStyle(color: Colors.blueAccent))
       ),
     );
