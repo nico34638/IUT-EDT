@@ -9,7 +9,7 @@ import 'package:jiffy/jiffy.dart';
 /// [endTime] Event end time
 class EventCard extends StatefulWidget {
   final Text name;
-  final Text speaker;
+  final String speaker;
   final String place;
   final DateTime startTime;
   final DateTime endTime;
@@ -51,9 +51,8 @@ class _EventCardState extends State<EventCard> {
       child: ListTile(
         title: widget.name,
         enabled: isEventAlreadyStarted(eventStartTime: widget.startTime),
-        subtitle: Text('${Jiffy(startTimeCourse).format("hh:mm")} - ${Jiffy(endTimeCourse).format("hh:mm")}  ${widget.summary.split('/')[1]}'), //subtitle: Text(widget.summary.split('/')[1]),
+        subtitle: Text('${Jiffy(startTimeCourse).format("hh:mm")} - ${Jiffy(endTimeCourse).format("hh:mm")}  ${widget.summary.split('/')[1]} ${widget.speaker.toUpperCase()}'), //subtitle: Text(widget.summary.split('/')[1]),
           trailing: Text(widget.place, style: TextStyle(color: Colors.blueAccent))
-
       ),
     );
   }
