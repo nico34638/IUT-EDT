@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:jiffy/jiffy.dart';
 
 void main() async {
-  await Jiffy.locale("fr");
+  await Jiffy.locale("en_Us");
   runApp(MyApp());
 }
 
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Emploi du temps IUT La Rochelle',
       initialRoute: Routes.login,
       routes: {
         Routes.login: (context) => LoginPage(),

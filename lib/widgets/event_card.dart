@@ -31,7 +31,10 @@ class EventCard extends StatefulWidget {
 
 class _EventCardState extends State<EventCard> {
   @override
+   
   Widget build(BuildContext context) {
+    DateTime startTimeCourse = widget.startTime.add(new Duration(hours: 2));
+    DateTime endTimeCourse = widget.endTime.add(new Duration(hours: 2));
     return Container(
       margin: EdgeInsets.symmetric(vertical: 5),
       padding: EdgeInsets.all(5),
@@ -48,7 +51,7 @@ class _EventCardState extends State<EventCard> {
       child: ListTile(
         title: widget.name,
         enabled: isEventAlreadyStarted(eventStartTime: widget.startTime),
-        subtitle: Text('${Jiffy(widget.startTime).add(hours: 2).hour}:${Jiffy(widget.startTime).add(hours: 2).minute} - ${Jiffy(widget.endTime).add(hours: 2).hour}:${Jiffy(widget.endTime).add(hours: 2).minute}  ${widget.summary.split('/')[1]}'), //subtitle: Text(widget.summary.split('/')[1]),
+        subtitle: Text('${Jiffy(startTimeCourse).format("hh:mm")} - ${Jiffy(endTimeCourse).format("hh:mm")}  ${widget.summary.split('/')[1]}'), //subtitle: Text(widget.summary.split('/')[1]),
           trailing: Text(widget.place, style: TextStyle(color: Colors.blueAccent))
 
       ),
