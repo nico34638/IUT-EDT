@@ -5,3 +5,7 @@
 <p align="center">
   <img src="https://github.com/ismailkoksal/UnivLaRochelle-Agenda/blob/master/screenshots/Emploi%20du%20temps.png" width="40%">
 </p>
+
+Fork du projet de Ismail Koksal
+
+https://github.com/ismailkoksal/IUT-La-Rochelle
