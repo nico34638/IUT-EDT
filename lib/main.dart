@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:jiffy/jiffy.dart';
 
 void main() async {
-  await Jiffy.locale("en_Us");
+  await Jiffy.locale("fr");
   runApp(MyApp());
 }
 
